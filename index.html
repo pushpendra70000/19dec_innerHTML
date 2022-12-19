@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>innerHTML and value</title>
+        
+        <script>
+            //js code before closing of head tag
+        </script>
+    </head>
+    <body>
+        <div data-a="1" class="c"></div>
+        
+        <hr>
+        
+        <p id="mypara"></p>
+        
+        <form>
+            <input type="text" class="i">
+        </form>
+
+        <button onclick='btn()'>
+            click me
+        </button>
+         
+        <script>
+            c1 = document.querySelector('div.c').innerHTML = ("hello pushpendra");
+            //console.log(c1);
+            //variable outside function is global variable
+            let a1 = document.querySelector('div[data-a="1"]')
+            console.log(a1.innerText);
+
+            mypara1 = document.querySelector('p#mypara')
+            mypara1.innerHTML = c1 + " " + "thorecha"
+            // console.log(mypara1);
+
+        function btn(){
+            //variable inside function in local variable
+            var i1 = document.querySelector('form input.i')
+            i1.value = mypara1.innerText
+        };
+            //js code befor closing of body tag
+        </script>
+    </body>
+</html>
